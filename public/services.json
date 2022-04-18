@@ -4,27 +4,27 @@
         "id": 147,
         "name": "ENGAGEMENT SESSION",
         "details": "Practice for your wedding day during your engagement session, and in turn, feel like a pro day-of. You'll see how I guide you and help you to look and feel awesome. And within a couple of weeks, you'll have photos to use for your Save the Dates.",
-        "price": 1800
+        "price": 800
     },
     {
         "id": 169,
         "img": "./ServiceImages/img4.jpg",
         "name": "WEDDING COVERAGE",
         "details": "Be at ease knowing you'll have all of the important moments, people, and details you want to have photographed with the right amount of hours of coverage. And within a couple of weeks, you'll have photos to use for your Save the Dates.",
-        "price": 1600
+        "price": 600
     },
     {
         "id": 178,
         "img": "./ServiceImages/img1.jpg",
         "name": "PERSPECTIVE VIEWS",
         "details": "Get even more photos of your day. And from two different perspectives. The moments you aren't a part of and the naturally emotional ones are just some instances having a second photographer just makes logical sense.",
-        "price": 1500
+        "price": 500
     },
     {
         "id": 166,
         "img": "./ServiceImages/img2.jpg",
         "name": "PHOTO BOOTH",
         "details": "Make it easy for your guests to have even more fun on your wedding day. The INSTA is a non-traditional photo booth built for INSTANT delivery of photos, GIFs, and boomerangs​​​​​​​ to save and share on social. Just you and your guest’s awesome selves!",
-        "price": 1700
+        "price": 700
     }
 ]
