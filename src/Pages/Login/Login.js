@@ -37,7 +37,7 @@ const Login = () => {
                     Submit
                 </Button>
             </Form>
-            <p>New to Dream Pictures <Link to='/signup' className='text-danger pe-auto text-decoration-none ' >Please Register</Link></p>
+            <p>New to Dream Pictures <Link to='/signup' className='text-danger pe-auto text-decoration-none ' >Please Sign Up</Link></p>
         </div>
     );
 };
