@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 
 const SignUp = () => {
 
+    const [agree, setAgree] = useState(false);
     const navigate = useNavigate();
     const confirmPasswordRef = useRef('');
     const emailRef = useRef('');
@@ -35,6 +36,8 @@ const SignUp = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value
         const confirmPassword = confirmPasswordRef.current.value;
+        // const agree = event.target.checked;
+
         if (password !== confirmPassword) {
             setError('Your two password did not match');
             return;
@@ -43,8 +46,11 @@ const SignUp = () => {
             setError('Password must be 6 characters or longer');
             return;
         }
+        if (agree) {
+            createUserWithEmailAndPassword(email, password);
+        }
 
-        createUserWithEmailAndPassword(email, password);
+
 
     }
     return (
@@ -66,8 +72,11 @@ const SignUp = () => {
                     <Form.Label>Confirm Password</Form.Label>
                     <Form.Control ref={confirmPasswordRef} type="password" placeholder="Confirm Password" required />
                 </Form.Group>
+                <Form.Group className="mb-3 text-start" controlId="formBasicCheckbox">
+                    <Form.Check className={agree ? 'text-dark' : 'text-danger'} onClick={() => setAgree(!agree)} type="checkbox" label="Accept Terms and Conditions " />
+                </Form.Group>
                 <p className='text-danger text-start'>{errorr}</p>
-                <Button className='px-5 mb-3' variant="dark" type="submit">
+                <Button disabled={!agree} className='px-5 mb-3' variant="dark" type="submit">
                     Submit
                 </Button>
             </Form>
