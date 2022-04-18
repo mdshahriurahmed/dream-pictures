@@ -5,12 +5,12 @@ import Slider from '../Slider/Slider';
 
 const Home = () => {
     return (
-        <div>
+        <div className='container'>
             <Slider ></Slider>
             <Description></Description>
 
             <h1 className='mt-5  fw-bold'>SERVICES</h1>
-            <div className='container'>
+            <div >
                 <HomeServices></HomeServices>
             </div>
         </div>
