@@ -1,11 +1,14 @@
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
 const SignUp = () => {
 
+
+    const [sendEmailVerification, sending] = useSendEmailVerification(
+        auth);
     const [agree, setAgree] = useState(false);
     const navigate = useNavigate();
     const confirmPasswordRef = useRef('');
@@ -30,7 +33,7 @@ const SignUp = () => {
         </div>
     }
 
-    const handleSubmit = event => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         const email = emailRef.current.value;
@@ -47,7 +50,11 @@ const SignUp = () => {
             return;
         }
         if (agree) {
-            createUserWithEmailAndPassword(email, password);
+
+            await createUserWithEmailAndPassword(email, password);
+            await sendEmailVerification();
+            alert('Sent email');
+            navigate('/');
         }
 
 

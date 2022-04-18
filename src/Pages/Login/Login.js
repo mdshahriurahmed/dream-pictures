@@ -1,4 +1,7 @@
 import React, { useRef, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -54,7 +57,7 @@ const Login = () => {
         }
         else {
             await sendPasswordResetEmail(email);
-            alert('Sent email');
+            toast('Sent email');
         }
     }
 
@@ -81,6 +84,7 @@ const Login = () => {
             </Form>
             <p>New to Dream Pictures <Link to='/signup' className='text-danger pe-auto text-decoration-none ' >Please Sign Up</Link></p>
             <p>Forget Password? <Link to='/login' className='text-danger pe-auto text-decoration-none ' onClick={resetPassword}>Reset Password</Link></p>
+            <ToastContainer />
         </div>
     );
 };
