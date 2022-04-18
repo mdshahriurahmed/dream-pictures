@@ -1,19 +1,39 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const Login = () => {
 
     const navigate = useNavigate();
 
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
     const emailRef = useRef('');
     const passwordRef = useRef('');
+
+
+    if (user) {
+        navigate('/');
+    }
+
+    if (loading) {
+        return <div class="spinner-border" style={{ marginTop: "150px" }} role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    }
     const handleSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value
-        console.log(email, password);
+        signInWithEmailAndPassword(email, password)
     }
+
     return (
         <div className='container w-50 mx-auto'>
             <h2 className='fw-bold mt-5'>Please Log In</h2>
@@ -30,9 +50,7 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                <Form.Group className="mb-3 text-start" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
+                <p className='text-danger text-start'>{error?.message}</p>
                 <Button className='px-5 mb-3' variant="dark" type="submit">
                     Submit
                 </Button>
