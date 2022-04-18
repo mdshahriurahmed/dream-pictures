@@ -10,7 +10,9 @@ const Home = () => {
             <Description></Description>
 
             <h1 className='mt-5  fw-bold'>SERVICES</h1>
-            <HomeServices></HomeServices>
+            <div className='container'>
+                <HomeServices></HomeServices>
+            </div>
         </div>
     );
 };
