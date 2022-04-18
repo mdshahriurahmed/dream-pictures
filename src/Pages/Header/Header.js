@@ -37,7 +37,7 @@ const Header = () => {
                                 :
                                 <Nav.Link as={Link} to='/login'>Log in</Nav.Link>}
 
-                            <Nav.Link className='border border-white border-1 rounded' as={Link} to='/signup'>
+                            <Nav.Link className='border border-white border-1 rounded ' as={Link} to='/signup'>
                                 Sign up
                             </Nav.Link>
                         </Nav>
