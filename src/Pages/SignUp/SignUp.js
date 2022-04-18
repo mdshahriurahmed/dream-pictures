@@ -84,7 +84,7 @@ const SignUp = () => {
                 </Form.Group>
                 <p className='text-danger text-start'>{errorr}</p>
                 <Button disabled={!agree} className='px-5 mb-3' variant="dark" type="submit">
-                    Submit
+                    Sign Up
                 </Button>
             </Form>
             <p>Already have an account <Link to='/login' className='text-danger pe-auto text-decoration-none ' >Log In</Link></p>

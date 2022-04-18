@@ -79,7 +79,7 @@ const Login = () => {
                 </Form.Group>
                 <p >{errorElement}</p>
                 <Button className='px-5 mb-3' variant="dark" type="submit">
-                    Submit
+                    Log In
                 </Button>
             </Form>
             <p>New to Dream Pictures <Link to='/signup' className='text-danger pe-auto text-decoration-none ' >Please Sign Up</Link></p>
