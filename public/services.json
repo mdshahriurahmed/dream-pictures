@@ -1,0 +1,44 @@
+[
+    {
+        "img": "../src/Images/slider1.jpg",
+        "id": 147,
+        "name": "International Women's Day Celebration Bundle",
+        "price": 1800
+    },
+    {
+        "id": 169,
+        "img": "../src/Images/slider1.jpg",
+        "name": "Sweet And Bright FruitFlowers Bundle",
+        "price": 1600
+    },
+    {
+        "id": 178,
+        "img": "../src/Images/slider1.jpg",
+        "name": "Flowers & Chocolate Covered Strawberries Gift Box",
+        "price": 1500
+    },
+    {
+        "id": 166,
+        "img": "../src/Images/slider1.jpg",
+        "name": "Easter Bouquet & Fruit Arrangement Bundle",
+        "price": 1700
+    },
+    {
+        "id": 128,
+        "img": "../src/Images/slider1.jpg",
+        "name": "Easter Bouquet Bundle",
+        "price": 1400
+    },
+    {
+        "id": 171,
+        "img": "../src/Images/slider1.jpg",
+        "name": "Easter Flowers & Treats Bundle",
+        "price": 1300
+    },
+    {
+        "id": 155,
+        "img": "../src/Images/slider1.jpg",
+        "name": "Birthday Bouquet & Berries Box",
+        "price": 1000
+    }
+]
